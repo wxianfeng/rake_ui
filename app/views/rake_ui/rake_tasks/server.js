@@ -18,7 +18,7 @@ function handler (req, res) {
 
 io.sockets.on('connection', function (socket) {
 	var spawn = require('child_process').spawn;
-	var tail = spawn("tail", ["-f", "/Users/rbrant/Sites/rake_ui/spec/dummy/log/rake.log"]);
+	var tail = spawn("tail", ["-f", "/data/projects/entos/log/rake.log"]);
 	
   tail.stdout.on("data", function (data) {
     socket.emit('tail', { tail : data.toString('utf-8') } )
