@@ -35,5 +35,21 @@ Rake::TestTask.new(:test) do |t|
   t.verbose = false
 end
 
+task :build do
+  system "gem build rake_ui.gemspec"
+end
+
+task :install => :build do
+  system "sudo gem install rake_ui-#{RakeUi::VERSION}.gem"
+end
+
+task :release => :build do
+  puts "Tagging #{RakeUi::VERSION}..."
+  system "git tag -a #{RakeUi::VERSION} -m 'Tagging #{RakeUi::VERSION}'"
+  puts "Pushing to Github..."
+  system "git push --tags"
+  puts "Pushing to rubygems.org..."
+  system "gem push hanzi_to_pinyin-#{RakeUi::VERSION}.gem"
+end
 
 task :default => :test
