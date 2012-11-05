@@ -14,6 +14,8 @@ RakeUI is a Rails 3.1 Engine that provides a simple web UI for your Rake tasks.
 
 In your Gemfile:
 
+  gem 'rake_ui', '0.4.0'
+  or
   gem 'rake_ui', :git => "git://github.com/wxianfeng/rake_ui.git", :branch => 'wxianfeng'
 
 In your routes.rb file:
@@ -24,7 +26,7 @@ In your routes.rb file:
 
 Config rake_ui
 	config/rake_ui.yml
-	
+
 	host: '192.168.10.107'
 	log: '/data/projects/entos/log/rake.log'
 
