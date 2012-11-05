@@ -2,3 +2,4 @@
 .gitkeep
 pkg
 *.gem
+Gemfile.lock
