@@ -2,7 +2,7 @@ var app = require('http').createServer(handler)
    , io = require('socket.io').listen(app)
    , fs = require('fs')
 
-app.listen(8000);
+app.listen(1337);
 
 function handler (req, res) {
   fs.readFile(__dirname + '/index.html',
@@ -25,4 +25,4 @@ io.sockets.on('connection', function (socket) {
   });
 });
 
-console.log('Log Server running now at http://[HOSTNAME]:8000/ in your browser');
+console.log('Log Server running now at http://[HOSTNAME]:1337/ in your browser');
