@@ -10,7 +10,7 @@ module RakeUi
     def create
       @rake_task = RakeUi::RakeTask.new(params[:rake_task])
       @rake_task.command = @tasks.select {|task| task['id'] == @rake_task.id }.pop['cmd']
-      Kernel.system("RAILS_ENV=#{Rails.env} #{@rake_task.command} #{@rake_task.arguments} >> #{Rails.root}/log/rake.log")
+      Kernel.system("RAILS_ENV=#{Rails.env} #{@rake_task.command} #{@rake_task.arguments} >> #{Rails.root}/log/rake.log  2>&1 &")
       respond_to do |format|
         format.js {}
       end
