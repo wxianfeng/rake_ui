@@ -37,7 +37,7 @@ end
 
 task :build do
   system "gem build rake_ui.gemspec"
-  system "cp ../pkg/rake_ui-#{RakeUi::VERSION} ."
+  system "cp #{File.expand_path('../pkg/rake_ui-'+ RakeUi::VERSION , __FILE__)}.gem ."
 end
 
 task :install => :build do
