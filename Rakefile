@@ -37,7 +37,7 @@ end
 
 task :build do
   system "gem build rake_ui.gemspec"
-  system "cp #{File.expand_path('../pkg/rake_ui-'+ RakeUi::VERSION , __FILE__)}.gem ."
+  # system "cp #{File.expand_path('../pkg/rake_ui-'+ RakeUi::VERSION , __FILE__)}.gem ."
 end
 
 task :install => :build do
@@ -49,8 +49,8 @@ task :release => :build do
   system "git tag -a #{RakeUi::VERSION} -m 'Tagging #{RakeUi::VERSION}'"
   puts "Pushing to Github..."
   system "git push --tags"
-  puts "Pushing to rubygems.org..."
-  system "gem push pkg/rake_ui-#{RakeUi::VERSION}.gem"
+  # puts "Pushing to rubygems.org..."
+  # system "gem push pkg/rake_ui-#{RakeUi::VERSION}.gem"
 end
 
 task :default => :test
