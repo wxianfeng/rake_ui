@@ -1,0 +1,1 @@
+RakeUiCfg = YAML::load(File.open(File.expand_path("#{Rails.root}/config/rake_ui.yml",__FILE__)))

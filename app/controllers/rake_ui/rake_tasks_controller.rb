@@ -20,8 +20,9 @@ module RakeUi
     
     def load_tasks
       @tasks = JSON.parse(RAKE_TASKS)
-      arr = ['rake deploy:local_test','rake db:migrate:all']
+      arr = ['rake deploy:local_test','rake db:migrate:all','rake about','rake routes']
       @tasks = @tasks.select { |task| arr.index(task['cmd']) }
+      @host = RakeUiCfg['host']
     end
   end
 end
