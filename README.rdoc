@@ -14,7 +14,7 @@ RakeUI is a Rails 3.1 Engine that provides a simple web UI for your Rake tasks.
 
 In your Gemfile:
 
-  gem 'rake_ui', '0.4.0'
+  gem 'rake_ui', '0.6.0'
   or
   gem 'rake_ui', :git => "git://github.com/wxianfeng/rake_ui.git", :branch => 'wxianfeng'
 
@@ -24,17 +24,24 @@ In your routes.rb file:
     mount RakeUi::Engine => "/rake_ui"
   end
 
-Config rake_ui
-	config/rake_ui.yml
+Config config/rake_ui.yml
 
-	host: '192.168.10.107'
-	log: '/data/projects/entos/log/rake.log'
+  host: '192.168.10.107'
+  log: '/data/projects/entos/log/rake.log'
+
+Config config/tasks.yml
+  - 'rake about'  
+  - 'rake routes'
 
 Start the node server:
 
   rake start_node_server
 
 Once your Rails app is started, visit /rake_ui to see your rake tasks. All stdout will be displayed in the browser under 'terminal output'.
+
+== Preview
+
+!http://wxianfeng.com/files/5513b74633873cb186c408bce1075b1071c4e6.png!
 
 == LICENSE:
 
