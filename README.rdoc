@@ -3,6 +3,7 @@
 == DESCRIPTION:
 
 RakeUI is a Rails 3.1 Engine that provides a simple web UI for your Rake tasks.
+中文用户可以看我的这个blog介绍: http://wxianfeng.com/2012/12/15/web-gui
 
 == REQUIREMENTS:
 
@@ -30,6 +31,7 @@ Config config/rake_ui.yml
   log: '/data/projects/entos/log/rake.log'
 
 Config config/tasks.yml
+
   - 'rake about'  
   - 'rake routes'
 
@@ -41,12 +43,10 @@ Once your Rails app is started, visit /rake_ui to see your rake tasks. All stdou
 
 == Preview
 
-!http://wxianfeng.com/files/5513b74633873cb186c408bce1075b1071c4e6.png!
+http://wxianfeng.com/files/5513b74633873cb186c408bce1075b1071c4e6.png
 
 == LICENSE:
 
 (The MIT License)
 
 Copyright (c) 2012:
-
-* {wxianfeng}[http://wxianfeng.com]
