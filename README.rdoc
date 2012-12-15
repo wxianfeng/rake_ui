@@ -3,7 +3,6 @@
 == DESCRIPTION:
 
 RakeUI is a Rails 3.1 Engine that provides a simple web UI for your Rake tasks.
-中文用户可以看我的这个blog介绍: http://wxianfeng.com/2012/12/15/web-gui
 
 == REQUIREMENTS:
 
